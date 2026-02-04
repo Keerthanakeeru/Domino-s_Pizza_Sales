@@ -100,10 +100,10 @@ group by hour(order_time);
 
 -- To find the category-wise distribution of pizzas.
 select category , count(name) from pizza_types group by category;
--- Output :  Chicken	6
-          -- Classic	8
-          -- Supreme	9
-          -- Veggie	    9
+-- Output :  Chicken	   6
+          -- Classic       8
+          -- Supreme	   9
+          -- Veggie	       9
 
 
 -- Calculate the average number of pizzas ordered per day .
@@ -122,9 +122,9 @@ on pizzas.pizza_type_id = pizza_types.pizza_type_id
 join order_details
 on order_details.pizza_id = pizzas.pizza_id
 group by pizza_types.name order by revenue desc limit 3;
--- Output :   The Thai Chicken Pizza	    43434.25
-           -- The Barbecue Chicken Pizza	42768
-           -- The California Chicken Pizza	41409.5
+-- Output :   The Thai Chicken Pizza	      43434.25
+           -- The Barbecue Chicken Pizza	  42768
+           -- The California Chicken Pizza	  41409.5
 
 -- Calculate the percentage contribution of each pizza type to total revenue.
 
@@ -146,10 +146,10 @@ FROM
     order_details ON order_details.pizza_id = pizzas.pizza_id
 GROUP BY pizza_types.category
 ORDER BY revenue DESC;
--- Output :  Classic	26.91
-          -- Supreme	25.46
-          -- Chicken	23.96
-          -- Veggie	    23.68
+-- Output :  Classic	   26.91
+          -- Supreme	   25.46
+          -- Chicken	   23.96
+          -- Veggie	       23.68
 
 -- Analyze the cumulative revenue generated over time .
 select order_date,
@@ -162,16 +162,16 @@ on order_details.pizza_id = pizzas.pizza_id
 join orders
 on orders.order_id = order_details.order_id
 group by orders.order_date) as sales;
--- Output :   2015-01-01	2713.8500000000004
-           -- 2015-01-02	5445.75
-           -- 2015-01-03	8108.15
-           -- 2015-01-04	9863.6
-           -- 2015-01-05	11929.55
-           -- 2015-01-06	14358.5
-           -- 2015-01-07	16560.7
-           -- 2015-01-08	19399.05
-           -- 2015-01-09	21526.4
-           -- 2015-01-10	23990.350000000002
+-- Output :   2015-01-01	    2713.8500000000004
+           -- 2015-01-02	    5445.75
+           -- 2015-01-03	    8108.15
+           -- 2015-01-04	    9863.6
+           -- 2015-01-05	    11929.55
+           -- 2015-01-06	    14358.5
+           -- 2015-01-07	    16560.7
+           -- 2015-01-08	    19399.05
+           -- 2015-01-09	    21526.4
+           -- 2015-01-10	    23990.350000000002
 -- Over all i am getting 358 rows but i displayed here only 10 .
 
 -- Determine the top 3 most ordered pizza types based on revenue for each pizza category.
@@ -186,18 +186,18 @@ on pizza_types.pizza_type_id = pizzas.pizza_type_id
 join order_details 
 on order_details.pizza_id = pizzas.pizza_id
 group by pizza_types.category , pizza_types.name) as a ) as b where rn <=3;
--- Output :  The Thai Chicken Pizza	        43434.25
-          -- The Barbecue Chicken Pizza	    42768
-          -- The California Chicken Pizza	41409.5
-          -- The Classic Deluxe Pizza	    38180.5
-          -- The Hawaiian Pizza	            32273.25
-          -- The Pepperoni Pizza	        30161.75
-          -- The Spicy Italian Pizza	    34831.25
-          -- The Italian Supreme Pizza	    33476.75
-          -- The Sicilian Pizza	            30940.5
-          -- The Four Cheese Pizza	        32265.70000000065
-          -- The Mexicana Pizza	            26780.75
-          -- The Five Cheese Pizza	        26066.5
+-- Output :  The Thai Chicken Pizza	           43434.25
+          -- The Barbecue Chicken Pizza	       42768
+          -- The California Chicken Pizza	   41409.5
+          -- The Classic Deluxe Pizza	       38180.5
+          -- The Hawaiian Pizza	               32273.25
+          -- The Pepperoni Pizza	           30161.75
+          -- The Spicy Italian Pizza	       34831.25
+          -- The Italian Supreme Pizza	       33476.75
+          -- The Sicilian Pizza	               30940.5
+          -- The Four Cheese Pizza	           32265.70000000065
+          -- The Mexicana Pizza	               26780.75
+          -- The Five Cheese Pizza	           26066.5
 
 
 
