@@ -19,7 +19,7 @@ select * from pizzas;
 
 -- Retrieve the total number of orders placed.
 select count(order_id) as Total_orders from orders;
--- Output :21350
+-- Output : 21350
 
 -- Calculate the total revenue generated from pizza sales.
 SELECT 
