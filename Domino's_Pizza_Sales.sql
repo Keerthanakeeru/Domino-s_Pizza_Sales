@@ -102,7 +102,7 @@ group by hour(order_time);
 select category , count(name) from pizza_types group by category;
 -- Output :  Chicken	   6
           -- Classic       8
-          -- Supreme	   9
+          -- Supreme	     9
           -- Veggie	    9
 
 
