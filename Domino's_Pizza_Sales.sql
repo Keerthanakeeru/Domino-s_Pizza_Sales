@@ -74,7 +74,7 @@ on pizza_types.pizza_type_id = pizzas.pizza_type_id
 join order_details
 on order_details.pizza_id = pizzas.pizza_id
 group by pizza_types.category order by quantity desc;
--- Output : Classic 	14888
+-- Output : Classic   14888
           -- Supreme	11987
           -- Veggie 	11649
           -- Chicken	11050
