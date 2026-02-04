@@ -146,7 +146,7 @@ FROM
     order_details ON order_details.pizza_id = pizzas.pizza_id
 GROUP BY pizza_types.category
 ORDER BY revenue DESC;
--- Output :  Classic	   26.91
+-- Output :  Classic	 26.91
           -- Supreme	   25.46
           -- Chicken	   23.96
           -- Veggie	   23.68
