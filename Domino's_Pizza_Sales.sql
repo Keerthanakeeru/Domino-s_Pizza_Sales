@@ -66,7 +66,7 @@ LIMIT 5;
         -- The Pepperoni Pizza	        2418
         -- The Thai Chicken Pizza	    2371
 
--- Join the necessary tables to find the total quantity of each pizza category ordered.
+-- Find the total quantity of each pizza category ordered.
 select pizza_types.category,
 sum(order_details.quantity) as quantity
 from pizza_types join pizzas
