@@ -122,7 +122,7 @@ on pizzas.pizza_type_id = pizza_types.pizza_type_id
 join order_details
 on order_details.pizza_id = pizzas.pizza_id
 group by pizza_types.name order by revenue desc limit 3;
--- Output :   The Thai Chicken Pizza	      43434.25
+-- Output :   The Thai Chicken Pizza	     43434.25
            -- The Barbecue Chicken Pizza	  42768
            -- The California Chicken Pizza	  41409.5
 
@@ -149,7 +149,7 @@ ORDER BY revenue DESC;
 -- Output :  Classic	   26.91
           -- Supreme	   25.46
           -- Chicken	   23.96
-          -- Veggie	       23.68
+          -- Veggie	   23.68
 
 -- Analyze the cumulative revenue generated over time .
 select order_date,
