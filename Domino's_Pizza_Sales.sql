@@ -61,7 +61,7 @@ GROUP BY pizza_types.name
 ORDER BY quantity DESC
 LIMIT 5;
 -- Output :The Classic Deluxe Pizza	    2453
-       -- The Barbecue Chicken Pizza	2432
+        -- The Barbecue Chicken Pizza	2432
         -- The Hawaiian Pizza	        2422
         -- The Pepperoni Pizza	        2418
         -- The Thai Chicken Pizza	    2371
