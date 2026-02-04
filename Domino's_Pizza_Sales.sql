@@ -162,7 +162,7 @@ on order_details.pizza_id = pizzas.pizza_id
 join orders
 on orders.order_id = order_details.order_id
 group by orders.order_date) as sales;
--- Output :   2015-01-01	    2713.8500000000004
+-- Output :   2015-01-01	   2713.8500000000004
            -- 2015-01-02	    5445.75
            -- 2015-01-03	    8108.15
            -- 2015-01-04	    9863.6
